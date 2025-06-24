@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PRODUCTS TO BUY</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      width: 200px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    button {
+      padding: 10px;
+      background: navy;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #cart, #payment {
+      margin-top: 30px;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    input, select {
+      margin-top: 5px;
+      padding: 7px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+           
+</section>
+              
+<!-- Beds -->
+<div class="furniture-item"><img src="images/BED1.jpg" alt="Bed 1"><p>Bed 1</p></div>
+<div class="furniture-item"><img src="images/BED2.jpg" alt="Bed 2"><p>Bed 2</p></div>
+<div class="furniture-item"><img src="images/BED3.jpg" alt="Bed 3"><p>Bed 3</p></div>
+<div class="furniture-item"><img src="images/BED4.jpg" alt="Bed 4"><p>Bed 4</p></div>
+<div class="furniture-item"><img src="images/BED5.jpg" alt="Bed 5"><p>Bed 5</p></div>
+
+<!-- Tables -->
+<div class="furniture-item"><img src="images/TABLE1.jpg" alt="Table 1"><p>Table 1</p></div>
+<div class="furniture-item"><img src="images/TABLE2.jpg" alt="Table 2"><p>Table 2</p></div>
+<div class="furniture-item"><img src="images/TABLE3.jpg" alt="Table 3"><p>Table 3</p></div>
+<div class="furniture-item"><img src="images/TABLE5.jpg" alt="Table 4"><p>Table 4</p></div>
+<div class="furniture-item"><img src="images/table5.JPG" alt="Table 5"><p>Table 5</p></div>
+
+<!-- Shoe Racks -->
+<div class="furniture-item"><img src="images/SHOERACK1.jpg" alt="Shoe Rack 1"><p>Shoe Rack 1</p></div>
+<div class="furniture-item"><img src="images/SHOERACK2.jpg" alt="Shoe Rack 2"><p>Shoe Rack 2</p></div>
+<div class="furniture-item"><img src="images/SHOERACK3.jpg" alt="Shoe Rack 3"><p>Shoe Rack 3</p></div>
+<div class="furniture-item"><img src="images/SHOERACK4.jpg" alt="Shoe Rack 4"><p>Shoe Rack 4</p></div>
+
+<!-- Sofas -->
+<div class="furniture-item"><img src="images/SOFA1.jpg" alt="Sofa 1"><p>Sofa 1</p></div>
+<div class="furniture-item"><img src="images/SOFA2.jpg" alt="Sofa 2"><p>Sofa 2</p></div>
+<div class="furniture-item"><img src="images/SOFA3.jpg" alt="Sofa 3"><p>Sofa 3</p></div>
+<div class="furniture-item"><img src="images/SOFA4.jpg" alt="Sofa 4"><p>Sofa 4</p></div>
+<div class="furniture-item"><img src="images/SOFA5.jpg" alt="Sofa 5"><p>Sofa 5</p></div>
+
+</section>
+
+
+
+
+<!-- About Section -->
+<section id="about" class="about-section">
+<h2>About Vimeko</h2>
+<p>We are a locally crafted furniture brand dedicated to delivering stylish, sustainable, and affordable pieces for your home and office.</p>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery-section">
+<h2>Gallery</h2>
+<div class="gallery-grid">
+<!-- Gallery images go here -->
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+<h2>Contact Us</h2>
+<form class="contact-form">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" rows="5" required></textarea>
+<button type="submit" class="btn">Send Message</button>
+</form>
+</section>
+<!-- ✅ LOGIN PROTECTION -->
+<script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "login.html";
+  }
+</script>
+
+<h1>SHOPPING CENTER</h1>
+
+<!-- ✅ PRODUCT LIST -->
+<div class="products" id="productList">
+  <div class="product">
+    <img src="https://via.placeholder.com/200x150" alt="Product 1">
+    <h3>TABLE 2</h3>
+    <p>KSh 4500</p>
+    <button onclick="addToCart('TABLE 2', 4500)">Add to Cart</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200x150" alt="Product 2">
+    <h3>Plastic Table</h3>
+    <p>KSh 1000</p>
+    <button onclick="addToCart('Plastic Table', 1000)">Add to Cart</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200x150" alt="Product 3">
+    <h3>SOFA5</h3>
+    <p>KSh 3000</p>
+    <button onclick="addToCart('SOFA5', 3000)">Add to Cart</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200x150" alt="Product 4">
+    <h3>BED5</h3>
+    <p>KSh 15000</p>
+    <button onclick="addToCart('BED5', 15000)">Add to Cart</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200x150" alt="Product 5">
+    <h3>BED3</h3>
+    <p>KSh 10000</p>
+    <button onclick="addToCart('BED3', 10000)">Add to Cart</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200x150" alt="Product 6">
+    <h3>SOFA1</h3>
+    <p>KSh 30000</p>
+    <button onclick="addToCart('SOFA1', 30000)">Add to Cart</button>
+  </div>
+</div>
+
+<!-- ✅ CART DISPLAY -->
+<div id="cart">
+  <h2>Your Cart</h2>
+  <ul id="cartItems"></ul>
+  <p><strong>Total:</strong> KSh <span id="cartTotal">0</span></p>
+</div>
+
+<!-- ✅ PAYMENT SECTION -->
+<div id="payment">
+  <h2>Payment</h2>
+
+  <label for="paymentMethod">Choose Payment Method:</label>
+  <select id="paymentMethod" onchange="updatePaymentFields()">
+    <option value="paybill">Paybill</option>
+    <option value="bank">Bank Transfer</option>
+  </select>
+
+  <div id="paybillFields" style="margin-top: 15px;">
+    <p><strong>Paybill Number:</strong> 123456</p>
+    <label>Account Number:
+      <input type="text" id="accountNumber" placeholder="Enter Account Number">
+    </label>
+  </div>
+
+  <div id="bankFields" style="margin-top: 15px; display: none;">
+    <p><strong>Bank Name:</strong> ABC Bank</p>
+    <p><strong>Account Name:</strong> Shopping Center</p>
+    <p><strong>Account Number:</strong> 0011223344</p>
+    <label>Transaction ID:
+      <input type="text" id="transactionId" placeholder="Enter Bank Transaction ID">
+    </label>
+  </div>
+
+  <div style="margin-top: 20px;">
+    <button onclick="confirmPayment()" style="background: green;">Confirm Payment</button>
+  </div>
+</div>
+
+<!-- ✅ LOGOUT BUTTON -->
+<div style="text-align:center; margin-top:20px;">
+  <button onclick="logout()" style="background: crimson;">Logout</button>
+</div>
+
+<!-- ✅ SCRIPT SECTION -->
+<script>
+  const currentUser = localStorage.getItem("loggedInUser"); // Ensure this is set during login
+  const cartKey = `cart_${currentUser}`;
+  const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    localStorage.setItem(cartKey, JSON.stringify(cart));
+    updateCart();
+  }
+
+  function updateCart() {
+    const cartItems = document.getElementById('cartItems');
+    const cartTotal = document.getElementById('cartTotal');
+    cartItems.innerHTML = '';
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        ${item.name} - KSh ${item.price}
+        <button onclick="removeFromCart(${index})" style="margin-left: 10px; background: crimson; color: white; border: none; border-radius: 3px; padding: 2px 6px;">🗑️ Remove</button>
+      `;
+      cartItems.appendChild(li);
+      total += item.price;
+    });
+
+    cartTotal.textContent = total;
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    localStorage.setItem(cartKey, JSON.stringify(cart));
+    updateCart();
+  }
+
+  function logout() {
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("loggedInUser");
+    localStorage.removeItem(cartKey);
+    window.location.href = "login.html";
+  }
+
+  function updatePaymentFields() {
+    const method = document.getElementById('paymentMethod').value;
+    document.getElementById('paybillFields').style.display = method === 'paybill' ? 'block' : 'none';
+    document.getElementById('bankFields').style.display = method === 'bank' ? 'block' : 'none';
+  }
+
+  function confirmPayment() {
+    const method = document.getElementById('paymentMethod').value;
+    let paymentDetails = '';
+
+    if (method === 'paybill') {
+      const account = document.getElementById('accountNumber').value;
+      if (!account) {
+        alert("Please enter your Account Number.");
+        return;
+      }
+      paymentDetails = `Paybill Account: ${account}`;
+    } else if (method === 'bank') {
+      const txnId = document.getElementById('transactionId').value;
+      if (!txnId) {
+        alert("Please enter your Transaction ID.");
+        return;
+      }
+      paymentDetails = `Bank Txn ID: ${txnId}`;
+    }
+
+    alert(`✅ Payment Confirmed via ${method.toUpperCase()}!\n${paymentDetails}\n\nThank you for your purchase!`);
+
+    localStorage.removeItem(cartKey);
+    cart.length = 0;
+    updateCart();
+  }
+
+  updateCart();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylessheet"href="styles.css"/>
+
+    <!-- header.html -->
+
+  
+  <style>
+  /* Header Styles */
+  header {
+    background-color: transparent;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #5C3A21;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #A47148;
+  }
+  
+  /* Mobile Menu Toggle */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #5C3A21;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      background-color: #fff;
+      padding: 1rem 0;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  }
+  </style>
+  
+  <script>
+  // Mobile menu toggle functionality
+  document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.getElementById("mobile-menu");
+    const navLinks = document.querySelector(".nav-links");
+  
+    menu.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      menu.classList.toggle("open");
+    });
+  });
+  </script>
+  
+</head>
+<body>
+
+
+
+
+
+    
+        <!-- Header -->
+        <header>
+            <nav class="navbar">
+              <div class="logo">
+                <a href="index.html">Vimeko Furnitures</a>
+              </div>
+              <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="PRODUCTS.HTML"> PRODUCTS</a></li>
+                <li><a href="ABOUT.HTML">ABOUT</a></li>
+                <li><a href="BUY.HTML">BUY</a></li>
+                <li><a href="contacts.html">CONTACTS</a></li>
+              </ul>
+              <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </nav>
+          </header>
+ 
+  
+      
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+          <div class="hero-content">
+            <h1>WELCOME TO VIMEKO FURNUTURES </h1>
+            <p>ELEGANCE IN EVERY PIECE ,CONFORT TO YOUR HOME .</p>
+            <a href="#products" class="btn">Explore Our Products</a>
+          </div>
+        </section>
+      
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+          <h2>Our Products</h2>
+          <div class="product-grid">
+            <!-- Product cards will go here -->
+      
+            
+              <!-- 1 to 50 -->
+              <section id="products" class="furniture-gallery">
+                <h2>Our Furniture Collection</h2>
+              
+                
+              </section>
+              
+                 <!-- Beds -->
+<div class="furniture-item"><img src="images/BED1.jpg" alt="Bed 1"><p>Bed 1</p></div>
+<div class="furniture-item"><img src="images/BED2.jpg" alt="Bed 2"><p>Bed 2</p></div>
+<div class="furniture-item"><img src="images/BED3.jpg" alt="Bed 3"><p>Bed 3</p></div>
+<div class="furniture-item"><img src="images/BED4.jpg" alt="Bed 4"><p>Bed 4</p></div>
+<div class="furniture-item"><img src="images/BED5.jpg" alt="Bed 5"><p>Bed 5</p></div>
+
+<!-- Tables -->
+<div class="furniture-item"><img src="images/TABLE1.jpg" alt="Table 1"><p>Table 1</p></div>
+<div class="furniture-item"><img src="images/TABLE2.jpg" alt="Table 2"><p>Table 2</p></div>
+<div class="furniture-item"><img src="images/TABLE3.jpg" alt="Table 3"><p>Table 3</p></div>
+<div class="furniture-item"><img src="images/TABLE5.jpg" alt="Table 4"><p>Table 4</p></div>
+<div class="furniture-item"><img src="images/table5.JPG" alt="Table 5"><p>Table 5</p></div>
+
+<!-- Shoe Racks -->
+<div class="furniture-item"><img src="images/SHOERACK1.jpg" alt="Shoe Rack 1"><p>Shoe Rack 1</p></div>
+<div class="furniture-item"><img src="images/SHOERACK2.jpg" alt="Shoe Rack 2"><p>Shoe Rack 2</p></div>
+<div class="furniture-item"><img src="images/SHOERACK3.jpg" alt="Shoe Rack 3"><p>Shoe Rack 3</p></div>
+<div class="furniture-item"><img src="images/SHOERACK4.jpg" alt="Shoe Rack 4"><p>Shoe Rack 4</p></div>
+
+<!-- Sofas -->
+<div class="furniture-item"><img src="images/SOFA1.jpg" alt="Sofa 1"><p>Sofa 1</p></div>
+<div class="furniture-item"><img src="images/SOFA2.jpg" alt="Sofa 2"><p>Sofa 2</p></div>
+<div class="furniture-item"><img src="images/SOFA3.jpg" alt="Sofa 3"><p>Sofa 3</p></div>
+<div class="furniture-item"><img src="images/SOFA4.jpg" alt="Sofa 4"><p>Sofa 4</p></div>
+<div class="furniture-item"><img src="images/SOFA5.jpg" alt="Sofa 5"><p>Sofa 5</p></div>
+
+              </section>
+              
+          
+          
+      
+        <!-- About Section -->
+        <section id="about" class="about-section">
+          <h2>About Vimeko</h2>
+          <p>We are a locally crafted furniture brand dedicated to delivering stylish, sustainable, and affordable pieces for your home and office.</p>
+        </section>
+      
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+          <h2>Gallery</h2>
+          <div class="gallery-grid">
+            <!-- Gallery images go here -->
+          </div>
+        </section>
+      
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+          <h2>Contact Us</h2>
+          <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </section>
+      
+        <!-- Footer -->
+      
+
+      
+    
+</body>
+</html>

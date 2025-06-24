@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f0f0f0;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+    .signup-box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px;
+      width: 100%;
+      background: green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .link {
+      margin-top: 10px;
+      display: block;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="signup-box">
+  <h2>Sign Up</h2>
+  <input type="text" id="signupUser" placeholder="Choose Username" required>
+  <input type="password" id="signupPass" placeholder="Choose Password" required>
+  <button onclick="register()">Register</button>
+  <p class="error" id="signupError"></p>
+  <a href="login.html" class="link">Already have an account? Login</a>
+</div>
+
+<script>
+  function register() {
+    const user = document.getElementById("signupUser").value;
+    const pass = document.getElementById("signupPass").value;
+
+    if (user === "" || pass === "") {
+      document.getElementById("signupError").textContent = "Please fill all fields.";
+      return;
+    }
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Check if user already exists
+    if (users.some(u => u.username === user)) {
+      document.getElementById("signupError").textContent = "Username already exists.";
+      return;
+    }
+
+    // Save new user
+    users.push({ username: user, password: pass });
+    localStorage.setItem("users", JSON.stringify(users));
+    alert("Account created! Please log in.");
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+/* ========== Root Variables ========== */
+:root {
+    --primary-color: #5C3A21; /* Warm brown */
+    --accent-color: #A47148;  /* Copper accent */
+    --background-color: transparent;
+    --text-color: #000000;
+    --heading-color: #000000;
+    --border-color: rgba(0, 0, 0, 0.1); /* subtle border */
+    --white: #ffffff;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ========== Reset & Base ========== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  a:hover {
+    color: var(--accent-color);
+  }
+  
+  /* ========== Typography ========== */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  /* ========== Layout ========== */
+  section {
+    padding: 4rem 2rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* ========== Hero Section ========== */
+  .hero-section {
+    text-align: center;
+    padding: 6rem 2rem;
+    background-color: var(--background-color);
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.8rem 1.6rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: var(--accent-color);
+  }
+  
+  /* ========== Furniture Gallery ========== */
+  .furniture-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+  }
+  
+  .furniture-item {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+  }
+  
+  .furniture-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .furniture-item p {
+    margin-top: 0.8rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* ========== About Section ========== */
+  .about-section {
+    text-align: center;
+  }
+  
+  /* ========== Gallery Section ========== */
+  .gallery-section .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .gallery-section img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* ========== Contact Section ========== */
+  .contact-section {
+    background-color: var(--white);
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    align-self: flex-start;
+  }
+  
+  /* ========== Footer ========== */
+  footer {
+    background-color: var(--background-color);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+  
+  /* ========== Responsive ========== */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  
+    .btn {
+      font-size: 1rem;
+    }
+  
+    .furniture-item img {
+      height: 160px;
+    }
+  }
+  
